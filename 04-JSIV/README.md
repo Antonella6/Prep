@@ -37,7 +37,8 @@ Ya conocemos y utilizamos métodos de arrays, `.push`,` .pop`, `.shift`,` .unshi
 `.forEach` es un bucle for integrado en cada array. `.forEach` toma un callback como su único argumento, e itera sobre cada elemento del array y llama al callback en él. El callback puede tomar dos argumentos, el primero es el elemento en sí, el segundo es el índice del elemento (este argumento es opcional).
 
 ```javascript
-const autos = ['Ford', 'Chevrolet', 'Toyota', 'Tesla'];
+const autos = ['Ford', 
+'Chevrolet', 'Toyota', 'Tesla'];
 
 // Podemos escribir el callback en los paréntesis como una función anónima
 autos.forEach(function(elemento, indice) {
@@ -56,7 +57,9 @@ autos.forEach(mostrarNombres);
 
 ### `.reduce`
 
-`.reduce` ejecutará un bucle en nuestro array con la intención de reducir cada elemento en un elemento que se devuelve. Como primer argumento, acepta un callback que toma dos argumentos, primero un 'acumulador' (el resultado del método de reducción hasta ahora), y el segundo es el elemento en el que se encuentra actualmente. El callback debe contener siempre una declaración de devolución ("return"). `.reduce` también toma un segundo argumento opcional, que sería el acumulador de arranque ("starting accumulator"). Si no se suministra el acumulador de arranque, la reducción comenzará en el primer elemento del array. `.reduce` siempre devolverá el acumulador cuando termine de recorrer los elementos.
+`.reduce` ejecutará un bucle en nuestro array con la intención de reducir cada elemento en un elemento que se devuelve. Como primer argumento, acepta un callback que toma dos argumentos, primero un 'acumulador' (el resultado del método de reducción hasta ahora), y el segundo es el elemento en el que se encuentra actualmente. El callback debe contener sie
+mpre una declaración de devolución ("return"). `.reduce` también toma un segundo argumento opcional, que sería el acumulador de arranque ("starting accumulator"). Si no se suministra el acumulador de arranque, la reducción comenzará en el primer elemento del array. `.reduce` 
+siempre devolverá el acumulador cuando termine de recorrer los elementos.
 
 ```javascript
 const numeros = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -65,7 +68,8 @@ const palabras = [ 'Hola,', 'mi', 'nombre', 'es', 'Wanda'];
 // Podemos escribir la función anónima directamente en los paréntesis de .reduce
 // Si omitimos el elemento inicial, siempre comenzará en el primer elemento.
 const suma = numeros.reduce(function(acc, elemento){
-    return acc + elemento;
+
+return acc + elemento;
 });
 
 // Podemos escribir una función fuera de los parents de .reduce (para usar varias veces más tarde)
@@ -78,7 +82,8 @@ const productos = numeros.reduce(multiplicarDosNumeros);
 // .reduce funciona en cualquier tipo de datos.
 // En este ejemplo configuramos un acumulador de arranque
 const frases = palabras.reduce(function(acc, elemento) {
-    return acc + ' ' + elemento;
+
+return acc + ' ' + elemento;
 }, 'Frase completa:');
 
 console.log(suma); // 45
@@ -94,6 +99,7 @@ const numeros = [2, 3, 4, 5];
 
 function multiplicarPorTres(elemento) {
     return elemento * 3;
+
 }
 
 const doble = numeros.map(function(elemento) {

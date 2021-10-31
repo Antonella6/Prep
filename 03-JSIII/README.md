@@ -22,8 +22,10 @@ function Gato(nombre) {
   // El nuevo operador crea un objeto, "this"
   this.nombre = nombre;
   this.maullar = function() {
-      return 'Mi nombre es ' + this.nombre + ' ... Meow!';
+      return 'Mi nombre es ' + this.nombre + ' ... Me
+      ow!';
   }
+  
   // Devuelve el objeto "this"
 }
 
@@ -111,6 +113,7 @@ Cuando generamos un arreglo nuevo podemos acceder a métodos como `map` o `slice
 
 Nosotros también podemos generar nuestros propios constructores de los cuales heredar. Creemos un constructor de el cual pueda haber variantes.
 
+
 ``` javascript
 > function Persona(nombre,apellido,ciudad) {
     this.nombre = nombre;
@@ -132,7 +135,8 @@ Ahora todo Alumno de Henry antes de Alumno es una Persona, asique podríamos dec
 
 ``` javascript
 > function Alumno(nombre,apellido,ciudad,curso) {
-    // podría copiar las mismas propiedades de Persona acá adentro
+    // podría copiar las mismas propiedades de 
+    Persona acá adentro
     this.nombre = nombre;
     this.apellido = apellido;
     this.ciudad = ciudad;
@@ -171,6 +175,7 @@ Descartemos esta opción.
 < Uncaught TypeError: sele.saludar is not a 'function'
 // que paso?
 ```
+
 
 Como podemos ver los métodos de _Personas_ no fueron pasados a nuestros _Alumnos_. Veamos un poco el porqué.
 
@@ -214,6 +219,7 @@ instructora.saludar();
 Aquí el constructor será la función que se invocará al momento de ejecutar el `new Persona` y creará una instancia de esa clase a la cual podremos acceder siempre que querramos a partir de la variable donde lo asignamos.
 
 #### Herencia ES6
+
 
 En este caso la sintaxis para lograr la herencia también se ve modificada:
 

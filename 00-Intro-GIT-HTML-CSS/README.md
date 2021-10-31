@@ -86,6 +86,7 @@ Como ven, para mayor facilidad en la lectura y la estructuración del documento,
 Es el tag para los párrafos. Mostrará el texto contenido dentro en una nueva línea.
 
 ```html
+
   <p>Soy un párrafo</p>
 ```
 
